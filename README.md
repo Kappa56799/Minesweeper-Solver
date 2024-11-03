@@ -20,3 +20,12 @@ Minesweeper Solver made in C++ that displays mines and also flags the mines.
 *  So now that we know where the mines are, I decided to find out the memory addresses the minesweeper grid is generated in using cheat engine. That's how I got the values 0x1005340 (start), x10056A0 (end). by seeing a border of the number 10 around and if I clicked a tile with for example 1 in it it would show 0x41 in memory and all the tiles next to it.
 *  The final step is now to flag every flag automatically, I did this by using the fact we show and marked all the mines as 0x8A on the grid so I read the grid from memory and used a loop to change every mine to a flag in the grid to automatically win the game if a non-mine tile was clicked.
   
+## Pictures of Outputs / The Game
+### Showing the Mines
+![image](https://github.com/user-attachments/assets/8f8b50dd-63a7-4b61-a16a-cb1c16540826)
+
+### Terminal Output to show that the mines have been replaced with flags
+![image](https://github.com/user-attachments/assets/004aa58e-7783-4450-92fc-0da32896fdbb)
+
+### Winning the Game
+![image](https://github.com/user-attachments/assets/e1bda855-9db2-4455-83a8-d92a983a66d0)
