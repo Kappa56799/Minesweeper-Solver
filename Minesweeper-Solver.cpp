@@ -65,7 +65,7 @@ int main() {
                 LPVOID targetAddress = (LPVOID)(start + i);
                 // replace mine with flag
                 if (WriteProcessMemory(pHandle, targetAddress, &newValue, sizeof(newValue), &bytesWritten)) {
-                    std::cout << "Replaced 0x8A with 0x0E at address " << std::hex << targetAddress << std::endl;
+                    std::cout << "Replaced 0x8A (mine) with 0x0E (flag) at address " << std::hex << targetAddress << std::endl;
                 } else {
                     std::cerr << "Failed to write to process memory at address " << std::hex << targetAddress << std::endl;
                 }
